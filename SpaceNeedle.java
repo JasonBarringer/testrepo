@@ -1,23 +1,21 @@
 public class SpaceNeedle {
 
-    static int size = 2;
+    public static final int SIZE = 5;
     public static void main(String[] args) {;
 
         drawPoll();
         drawTop();
-        //drawMiddle();
         drawBottom();
         drawPoll();
         drawBigPoll();
         drawTop();
 
-
     }
 
     public static void drawPoll() {
-        for(int i = 1; i <= size; i++) {
+        for(int i = 1; i <= SIZE; i++) {
             
-            for(int x = 1; x <= 3 * size; x++) {
+            for(int x = 1; x <= 3 * SIZE; x++) {
                 System.out.print(" ");
             }
 
@@ -26,9 +24,9 @@ public class SpaceNeedle {
     }
 
     public static void drawTop() {
-        for(int i = 1; i <= size; i++) {
+        for(int i = 1; i <= SIZE; i++) {
             
-            for(int x = 1; x <= 3 * (size - i); x++) {
+            for(int x = 1; x <= 3 * (SIZE - i); x++) {
                 System.out.print(" ");
             }
 
@@ -49,23 +47,15 @@ public class SpaceNeedle {
 
         System.out.print("|");
 
-        for(int i = 1; i <= 6 * size; i++) {
+        for(int i = 1; i <= 6 * SIZE; i++) {
             System.out.print("\"");
         }
 
         System.out.println("|");
     }
 
-    // public static void drawMiddle() {
-    //     System.out.print("|");
-    //     for(int i = 1; i <= 6 * size; i++) {
-    //         System.out.print("\"");
-    //     }
-    //     System.out.println("|");
-    // }
-
     public static void drawBottom() {
-        for(int i = 0; i < size; i++) {
+        for(int i = 0; i < SIZE; i++) {
             
             for(int x = 1; x <= 2 * i; x++) {
                 System.out.print(" ");
@@ -73,7 +63,7 @@ public class SpaceNeedle {
     
             System.out.print("\\_");
     
-            for(int x = 1; x <= 3 * size - (2 * i) - 1; x++) {
+            for(int x = 1; x <= 3 * SIZE - (2 * i) - 1; x++) {
                 System.out.print("/\\");
             }
 
@@ -82,20 +72,20 @@ public class SpaceNeedle {
     }
 
     public static void drawBigPoll() {
-        for(int i = 1; i <= size * size; i++) {
-            for(int x = 1; x < size * 2 + 2; x++) {
+        for(int i = 1; i <= SIZE * SIZE; i++) {
+            for(int x = 1; x < SIZE * 2 + 2; x++) {
                 System.out.print(" ");
             }
 
             System.out.print("|");
 
-            for(int x = 1; x <= size - 2; x++) {
+            for(int x = 1; x <= SIZE - 2; x++) {
                 System.out.print("%");
             }
 
             System.out.print("||");
 
-            for(int x = 1; x <= size - 2; x++) {
+            for(int x = 1; x <= SIZE - 2; x++) {
                 System.out.print("%");
             }
 
