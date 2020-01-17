@@ -6,9 +6,9 @@
 //
 // This program will print the words to the cumulative song about the old woman who swallowed a fly.
 
-
 public class Song {
    public static void main(String[] args) {
+      //This is the main class. It prints the unique lines of the song and calls the methods for the non-unique lines
       System.out.println("There was an old woman who swallowed a fly.");
       fly();
       System.out.println("There was an old woman who swallowed a spider,");
@@ -30,6 +30,8 @@ public class Song {
       System.out.println("She died of course.");
    }
    
+   //each of the following methods prints one of the recursive lines then calls the method for the next line.
+   //It's done in this way so that you can start at any line and it will print all of the following lines.
    public static void monkey() {
       System.out.println("She swallowed the monkey to catch the dog,");
       dog();
