@@ -1,6 +1,6 @@
 public class SpaceNeedle {
 
-    static int size = 7;
+    static int size = 2;
     public static void main(String[] args) {;
 
         drawPoll();

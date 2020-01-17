@@ -1,35 +1,33 @@
-public class Figure{
-   public static void main(String[] args){
-      drawShape("diamond");
-      drawShape("diamond");
-      drawShape("x");
+public class Figure {
+   public static void main(String[] args) {
+      drawDiamond();
+
+      drawDiamond();
+
+      drawX();
    }
-  
-   public static void draw(String str){
-      if(str == "top"){
-         System.out.println("  /\\  ");
-         System.out.println(" /  \\ ");
-         System.out.println("/    \\");
-      }
-      else if(str == "bottom"){
-         System.out.println("\\    /");
-         System.out.println(" \\  / ");
-         System.out.println("  \\/  ");
-      }
-      else{
-         System.out.println();
-      }
-      }
-      public static void drawShape(String shape){
-         if(shape == "diamond"){
-            draw("top");
-            draw("bottom");
-            draw("");
-         }
-         if(shape == "x"){
-            draw("bottom");
-            draw("top");
-            draw("");
-         }
-      }
+
+   public static void drawDiamond() {
+      drawMountatin();
+      drawValley();
+      System.out.println();
    }
+
+   public static void drawX() {
+      drawValley();
+      drawMountatin();
+      System.out.println();
+   }
+
+   public static void drawMountatin(){
+      System.out.println("  /\\  ");
+      System.out.println(" /  \\ ");
+      System.out.println("/    \\");
+   }
+
+   public static void drawValley(){
+      System.out.println("\\    /");
+      System.out.println(" \\  / ");
+      System.out.println("  \\/  ");
+   }
+}
