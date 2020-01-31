@@ -1,10 +1,19 @@
-package drawing;
+// Jason Barringer
+// 1/28/2020
+// CSE142
+// TA: Esther Chien
+// Assignment #3
+//
+// This program will use DrawingPanel to draw the cafe wall illusion
 
 import java.awt.*;
 
 public class CafeWall {
 
     public static final int MORTAR = 1;
+
+    //the main method initializes the canvas and then calls each of the methods to draw the lines or
+    //grids in each location
     public static void main(String[] args){
         DrawingPanel canvas = new DrawingPanel(650, 400);
         canvas.setBackground(Color.GRAY);
@@ -18,6 +27,9 @@ public class CafeWall {
         drawGrid(g, 425, 180, 5, 20, 10);
     }
 
+    //the drawline method uses Graphics g to draw a line of squares of length 'length', with size
+    //squaresize, starting at point (x, y). It does this by drawing pairs of squares repeatedly
+    //using a for loop. It also draws a blue x over each black square.
     public static void drawLine(Graphics g, int x, int y, int length, int squareSize) {
         for (int c = 0; c < length; c++) {
             int localX = x + (2 * c * squareSize);
@@ -35,6 +47,10 @@ public class CafeWall {
         }
     }
 
+    //the drawGrid method accepts the same parameters as the drawLine method with the addition of the offset
+    //parameter. Also notice that length is replaced with gridSize. This is because the gridSize and length are
+    //actually the same, but when talking about a square grid, length seemed like a misleading name. The offset
+    //is the pixel amount by which every other line is shifted to the right.
     public static void drawGrid(Graphics g, int x, int y, int gridSize, int squareSize, int offset) {
         for(int c = 0; c < gridSize; c++) {
             for(int l = 0; l < 2 * gridSize; l++) {

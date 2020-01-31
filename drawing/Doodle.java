@@ -1,12 +1,10 @@
 // Jason Barringer
-// 1/22/2020
+// 1/28/2020
 // CSE142
 // TA: Esther Chien
 // Assignment #3
 //
 // This program will use DrawingPanel to draw an apple!
-
-package drawing;
 
 import java.awt.*;
 
