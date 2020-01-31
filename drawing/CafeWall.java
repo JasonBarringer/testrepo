@@ -5,6 +5,7 @@
 // Assignment #3
 //
 // This program will use DrawingPanel to draw the cafe wall illusion
+package drawing;
 
 import java.awt.*;
 

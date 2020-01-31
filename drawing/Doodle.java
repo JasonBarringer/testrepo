@@ -5,6 +5,7 @@
 // Assignment #3
 //
 // This program will use DrawingPanel to draw an apple!
+package drawing;
 
 import java.awt.*;
 
