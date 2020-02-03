@@ -61,6 +61,7 @@ public class Grades {
     public static int readassignscores(){
         Scanner console = new Scanner(System.in);
         int score = console.nextInt();
+        console.close();
         return(score);
     }
 }
