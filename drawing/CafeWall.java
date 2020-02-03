@@ -34,17 +34,16 @@ public class CafeWall {
     public static void drawLine(Graphics g, int x, int y, int length, int squareSize) {
         for (int c = 0; c < length; c++) {
             int localX = x + (2 * c * squareSize);
-            int localY = y;
 
             g.setColor(Color.BLACK);
-            g.fillRect(localX, localY, squareSize, squareSize);
+            g.fillRect(localX, y, squareSize, squareSize);
 
             g.setColor(Color.BLUE);
-            g.drawLine(localX, localY, localX + squareSize, localY + squareSize);
-            g.drawLine(localX + squareSize, localY, localX, localY + squareSize);
+            g.drawLine(localX, y, localX + squareSize, y + squareSize);
+            g.drawLine(localX + squareSize, y, localX, y + squareSize);
 
             g.setColor(Color.WHITE);
-            g.fillRect(localX + squareSize, localY, squareSize, squareSize);
+            g.fillRect(localX + squareSize, y, squareSize, squareSize);
         }
     }
 
