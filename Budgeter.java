@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class Budget {
+public class Budgeter {
 
     //This is the amount of days in the given month, it's at 31 right now (Shoutout to January 2020)
     public static int days = 31;
@@ -27,7 +27,8 @@ public class Budget {
 
     //print intro prints the intro. It's very good at it
     public static void printIntro() {
-        System.out.println("This program asks for your monthly income and\nexpenses, then tells you your net monthly income.\n");
+        System.out.println("This program asks for your monthly income and");
+        System.out.println("expenses, then tells you your net monthly income.\n");
     }
 
     //monthlyOrDaily is dedicated to asking the age old question, 'Enter 1) monthly or 2) daily expenses?'
@@ -92,7 +93,7 @@ public class Budget {
                 System.out.println("Hey, woah, that's not safe");
             } else {
                 System.out.println("You're a big spender.");
-                System.out.println("If you or a loved one has been diagnosed with Mesothelioma you may to be entitled to financial compensation.");
+                System.out.println("Spendy spendy chicken tendy.");
             }
         }
     }
