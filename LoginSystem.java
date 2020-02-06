@@ -10,18 +10,13 @@ public class LoginSystem {
         System.out.print("Enter your full name: ");
         String fullName = s.nextLine();
         System.out.println("Welcome, " + fullName);
-        while(true) {
-            System.out.println("Password? (\"exit\" to exit) ");
-            String testPass = s.nextLine();
-            if(testPass.equals(REAL_PASSWORD)) {
-                System.out.println("do not try again");
-                return;
-            } else if(testPass.equals("exit")){
-                System.out.println("loser");
-                return;
-            } else {
-                System.out.println("Try again?");
-            }
+        String testPass = s.nextLine();
+        while(!testPass.equals(REAL_PASSWORD)) {
+            System.out.println("Try again...");
+            System.out.println("Password? ");
+            testPass = s.nextLine();
         }
+        System.out.println("do not try again");
+        s.close();
     }
 }
