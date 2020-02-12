@@ -6,11 +6,9 @@ public class Roulette {
         Random r = new Random();
 
         int bank = 100;
-        int max = bank;
 
         while (bank > 0) {
             System.out.print("What's your bet? ");
-            int bet = console.nextInt();
             System.out.print("HIGH or LOW? ");
             String HoL = console.next().toUpperCase();
             System.out.println("Spinning!");
@@ -28,6 +26,7 @@ public class Roulette {
             if((HoL == "HIGH" && result >= 18) || (HoL == "LOW" && result < 18)) {
                 System.out.println("You won!");
             }
+            console.close();
         }
 
     }
