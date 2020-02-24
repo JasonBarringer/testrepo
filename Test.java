@@ -1,24 +1,38 @@
 import java.util.*;
+
+import javax.swing.event.HyperlinkEvent;
+
 import java.io.*;
 
 public class Test{
     public static void main(String[] args) throws FileNotFoundException{
         Scanner input = new Scanner(new File("testFile.txt"));
-        while(input.hasNextLine()){
-            String line = input.nextLine();
-            Scanner lineScan = new Scanner(line);
-            while (lineScan.hasNext()) {
-                String word = lineScan.next();
-                word.replace("o", "0");
-                word.replace("e", "3");
-                word.replace("a", "4");
-                word.replace("t", "7");
-                if(word.endsWith("s")) {
-                    word.replace("s", "z");
-                }
+        int[] scores = getScores(input);
+        double average = (double)total / numScores;
+        System.out.println(average);
 
-            }
-            System.out.println();
+        System.out.println(numAboveAverage(scores, average));
+    }
+
+    public static int[] getScores(Scanner input){
+        int numScores = input.nextInt();
+        int[] scores = new int[numScores];
+        for (int times = 0; times < numScores; times++) {
+            scores[times] = input.nextInt();
         }
+
+        return scores;
+    }
+
+    public stativ double average
+
+    public static int numAboveAverage (int[] scores, double average) {
+        int count = 0;
+        for (int i = 0; i < scores.length; i++) {
+            if(scores[i] > average) {
+                count++;
+            }
+        }
+        return count;
     }
 }
