@@ -8,10 +8,10 @@ public class Test{
     public static void main(String[] args) throws FileNotFoundException{
         Scanner input = new Scanner(new File("testFile.txt"));
         int[] scores = getScores(input);
-        double average = (double)total / numScores;
-        System.out.println(average);
+       // double average = (double)total / numScores;
+       // System.out.println(average);
 
-        System.out.println(numAboveAverage(scores, average));
+      //  System.out.println(numAboveAverage(scores, average));
     }
 
     public static int[] getScores(Scanner input){
@@ -24,7 +24,7 @@ public class Test{
         return scores;
     }
 
-    public stativ double average
+   // public stativ double average
 
     public static int numAboveAverage (int[] scores, double average) {
         int count = 0;
