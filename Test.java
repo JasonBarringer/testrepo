@@ -6,33 +6,41 @@ import java.io.*;
 
 public class Test{
     public static void main(String[] args) throws FileNotFoundException{
-        Scanner input = new Scanner(new File("testFile.txt"));
-        int[] scores = getScores(input);
-       // double average = (double)total / numScores;
-       // System.out.println(average);
-
-      //  System.out.println(numAboveAverage(scores, average));
-    }
-
-    public static int[] getScores(Scanner input){
-        int numScores = input.nextInt();
-        int[] scores = new int[numScores];
-        for (int times = 0; times < numScores; times++) {
-            scores[times] = input.nextInt();
-        }
-
-        return scores;
-    }
-
-   // public stativ double average
-
-    public static int numAboveAverage (int[] scores, double average) {
-        int count = 0;
-        for (int i = 0; i < scores.length; i++) {
-            if(scores[i] > average) {
-                count++;
+        PrintStream output = new PrintStream(new File("output.txt"));
+        Random r = new Random();
+        for(int i = 1; i < 70; i++) {
+            int x = r.nextInt(5);
+            if(x < 2){
+                output.print("A");
+            } else if(x < 4){
+                output.print("B");
+            } else {
+                output.print("-");
             }
         }
-        return count;
+        output.println();
+        for(int i = 1; i < 70; i++) {
+            int x = r.nextInt(5);
+            if(x < 2){
+                output.print("A");
+            } else if(x < 4){
+                output.print("B");
+            } else {
+                output.print("-");
+            }
+        }
+        output.println();
+        for(int i = 1; i < 70; i++) {
+            int x = r.nextInt(5);
+            if(x < 2){
+                output.print("A");
+            } else if(x < 4){
+                output.print("B");
+            } else {
+                output.print("-");
+            }
+        }
+        output.println();
     }
+
 }
