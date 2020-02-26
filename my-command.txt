@@ -1,0 +1,8 @@
+REVERSE
+
+REVERSE takes a single string, then returns that string backwards. It also removes the underscores, 
+replacing them with spaces.
+
+Input: REVERSE "A_nut_for_a_jar_of_tuna"
+
+Output: "anut fo raj a rof tun A"
