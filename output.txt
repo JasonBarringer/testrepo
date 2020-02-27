@@ -1,0 +1,3 @@
+Clint Stevens: [44, 64, 43, 58] = ENTP
+Samwise Gamgee: [60, 38, 50, 37] = ISFJ
+Mr. Peanut: [75, 33, 73, 50] = ISFP
