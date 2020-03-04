@@ -35,7 +35,7 @@ public class PersonalityTest {
     public static String[] getFiles(Scanner console) {
         String[] files = new String[2];
         System.out.println("This program processes a file of answers to the");
-        System.out.println("Keirsey Temperament Sorter. It converts the");
+        System.out.println("Keirsey Temperament Sorter.  It converts the");
         System.out.println("various A and B answers for each person into");
         System.out.println("a sequence of B-percentages and then into a");
         System.out.println("four-letter personality type.\n");
@@ -91,7 +91,7 @@ public class PersonalityTest {
         }
 
         for(int i = 0; i < 4; i++){
-            BPercent[i] =  BCounts[i] * 100 / (ACounts[i] + BCounts[i]);
+            BPercent[i] =  (int)Math.round(BCounts[i] * 100.0 / (ACounts[i] + BCounts[i]));
         }
         return BPercent;
     }
@@ -106,22 +106,27 @@ public class PersonalityTest {
     */
     public static String getType(int[] BPercent) {
         String type = "";
-        type += letter(BPercent[0], "E", "I");
-        type += letter(BPercent[1], "S", "N");
-        type += letter(BPercent[2], "T", "F");
-        type += letter(BPercent[3], "J", "P");
+        type += letter(BPercent[0], 'E', 'I');
+        type += letter(BPercent[1], 'S', 'N');
+        type += letter(BPercent[2], 'T', 'F');
+        type += letter(BPercent[3], 'J', 'P');
         return type;
     }
 
     /*
-    letter method accepts an integer percentage and a String a and String b
-    
+    Method letter accepts a percentage as an integer, a char A, and a char B.
+    It returns a char.
+    This is pretty much just a method to reduce redundancy when creating the String
+    It tests the percentage of responses and returns the corresponding letter, determined
+    either by the input characters or the X if the percentage is 50
     */
-    public static String letter(int percent, String a, String b) {
+    public static char letter(int percent, char a, char b) {
         if(percent < 50){
             return a;
-        } else {
+        } else if(percent > 50) {
             return b;
+        } else {
+            return 'X';
         }
     }
 }

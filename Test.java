@@ -3,5 +3,4 @@ public class Test{
         String str = "";
         System.out.print(str.charAt(0));
     }
-
 }
